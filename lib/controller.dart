@@ -11,7 +11,7 @@ class Controller extends GetxController {
     webViewController = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setBackgroundColor(Color(0x00000000))
-      ..loadRequest(Uri.parse("https://www.clips.drisrar.com/"))
+      ..loadRequest(Uri.parse("http://smarttrack.ismart.link/dashboard"))
       ..setNavigationDelegate(
         NavigationDelegate(
           onProgress: (int progress) {
@@ -23,17 +23,17 @@ class Controller extends GetxController {
             }
           },
           onWebResourceError: (WebResourceError error) {
-            Get.rawSnackbar(
-              backgroundColor: Colors.red,
-              messageText: Text(
-                "Error: ${error.description}",
-                style: const TextStyle(
-                  fontSize: 16,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            );
+            // Get.rawSnackbar(
+            //   backgroundColor: Colors.red,
+            //   messageText: Text(
+            //     "Error: ${error.description}",
+            //     style: const TextStyle(
+            //       fontSize: 16,
+            //       color: Colors.white,
+            //       fontWeight: FontWeight.bold,
+            //     ),
+            //   ),
+            // );
           },
         ),
       );
